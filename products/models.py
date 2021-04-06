@@ -6,3 +6,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.CharField(max_length=255)
     active = models.BooleanField(default=True)
+    featured = models.BooleanField(default=False)
+
+    def __str__(self) -> str:
+        return self.name
