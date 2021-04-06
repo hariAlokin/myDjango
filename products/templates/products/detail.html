@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}{{name}}{% endblock title %}
 {% block content %}
-    <b>Product Name: </b>{{name}}
+    <b>Product Name: </b>{{name|capfirst}}
     <b>Product Description: </b>{{description}}
-    <b>Product Price: </b>{{price}}
+    <b>Product Price: </b>{{price| add:10900}}/- Rs
 {% endblock content %}
