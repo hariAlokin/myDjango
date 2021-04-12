@@ -25,7 +25,7 @@ urlpatterns = [
     path('contact-us/', contact, name="contact"),
     path('products/', product_index, name="product_index"), 
     path('products/add/', product_create, name="product_create"), 
-    path('products/3/', product_detail, name="product_detail"), 
+    path('products/<int:p_id>/', product_detail, name="product_detail"), 
     # path('products/3/edit/', product_update, name="product_update"), 
     # path('products/3/delete/', product_delete, name="product_delete"), 
 ]

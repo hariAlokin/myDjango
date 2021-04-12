@@ -17,8 +17,9 @@ def product_index(request, *args, **kwargs):
     p_list = Product.objects.filter(active=True)
     return render(request, "products/index.html", {"product_list": p_list})
 
-def product_detail(request):
-    p_obj = Product.objects.get(id=3)
+def product_detail(request, p_id):
+    # print(p_id)
+    p_obj = Product.objects.get(id=p_id)
     p_context = {
         "name": p_obj.name,
         "description": p_obj.description,
