@@ -6,5 +6,10 @@
     <b>Organisation: </b>{{organisation}} <br>
     <b>Email: </b>{{email}}<br>
     <b>Phone: </b>{{phone}}<br>
-
+    
+    <form method='POST'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
 {% endblock content %}
